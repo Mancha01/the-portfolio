@@ -48,3 +48,25 @@ footer p{
   color: #bbb;
   margin: 40px auto;
 }
+
+.blog{
+  max-width: 100vw;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+}
+
+.blog img{
+margin-bottom: 50px;
+max-width: 100vw;
+
+}
+.challenges{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+.challenges iframe{
+  margin-top: 20px;
+}

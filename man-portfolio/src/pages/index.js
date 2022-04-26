@@ -12,6 +12,7 @@ export default function Home() {
         <h3>Develop & Deploy</h3>
       <p>Front End Developer</p>
       <Link className={containerStyles.btn} to='/projects'>My Portfolio Projects</Link>
+      <p></p>
     </div>
     <img src="/web-design-2906159_1920.jpg" alt="site banner" className={containerStyles.img} />
   </section>

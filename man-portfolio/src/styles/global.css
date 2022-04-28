@@ -39,9 +39,11 @@ nav a {
   font-weight: 400;
   padding-bottom: 8px;
   border-bottom: 3px solid transparent;
+  transition: 0.7s ease-in-out;
 }
 nav a:hover {
   border-color: white;
+ 
 }
 footer p{
   text-align: center;

@@ -7,7 +7,7 @@ import '../styles/global.css'
 const About = () => {
   return (
       <Layout>
-    <div>
+    <div className='about'>
     <p>
             <hr />
             My name is Emmanuel Pam Mancha and I am a FrontEnd Developer. I specialize in creating user interfaces that are 
@@ -37,17 +37,17 @@ For more information about me, my work, and how to contact me, please consult th
     </div>
 
     <div>
-    <a href="https://github.com/Mancha01" className='fa-icons' target='_blank'> Github
+    <a href="https://github.com/Mancha01" className='fa-icons' target='_blank'> 
         <FaGithub />
     </a>
-    <a href="https://www.linkedin.com/in/emmanuel-pam-081b89ab/" className='fa-icons' target='_blank'> Linked 
+    <a href="https://www.linkedin.com/in/emmanuel-pam-081b89ab/" className='fa-icons' target='_blank'>  
         <FaLinkedinIn />
     </a>
-    <a href="https://twitter.com/EmmanuelPam9" className='fa-icons' target='_blank'> Twitter
+    <a href="https://twitter.com/EmmanuelPam9" className='fa-icons' target='_blank'> 
         <FaTwitterSquare />
     </a>
 
-    <a href = "mailto: pamemmanuel0@gmail.com" className='fa-icons' target='_blank'> Email
+    <a href = "mailto: pamemmanuel0@gmail.com" className='fa-icons' target='_blank'> 
     <FaMailBulk />
     </a>
     

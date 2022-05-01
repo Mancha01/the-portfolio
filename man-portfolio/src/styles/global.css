@@ -72,6 +72,9 @@ max-width: 100vw;
 .challenges iframe{
   margin-top: 20px;
 }
+.challenges h1{
+  margin-bottom: 20px;
+}
 
 .fa-icons {
   margin-right: 20px;
@@ -84,4 +87,29 @@ max-width: 100vw;
   .about{
     padding: 10px;
   }
+  .contact {
+padding-left: 20px;
+padding-right: 20px;
+   }
+
+   .challenges iframe{
+     max-width: 100%;
+   }
+   .challenges{
+     padding: 25px;
+   }
+
+   .challenges h1{
+     padding-left: 20px;
+     margin-bottom: 20px;
+   }
+}
+
+
+
+.contact h1{
+  margin-bottom: 20px;
+}
+.contact h3{
+  margin-bottom: 50px;
 }

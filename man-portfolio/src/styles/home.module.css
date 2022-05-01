@@ -33,3 +33,9 @@
     transition: 0.4s ease-in-out;
     
 }
+
+@media (max-width: 780px){
+  .header{
+    padding: 20px;
+  }
+}

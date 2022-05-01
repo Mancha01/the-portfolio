@@ -32,6 +32,11 @@ online experiences that accentuate and ultimately climax the company offers.
 
 <hr />
 
+<p>Tech Stack: HTML, CSS, JAVASCRIPT, SCSS, REACT, FIGMA, GATSBYJS, WEBFLOW, GIT</p>
+
+
+<hr />
+
 For more information about me, my work, and how to contact me, please consult the options below:
         </p>
     </div>

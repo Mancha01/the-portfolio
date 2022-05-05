@@ -29,6 +29,13 @@ Projects = ({data}) => {
                         <p>Html, Css and Javascript</p>
                     </div>
                 </a>
+                <a href="https://the-eclipse-618f27.webflow.io/" target='_blank'>
+                <div>
+                        <img src="../Screenshot (1017).png" alt="The Eclipse" />
+                        <h3>The Eclipse</h3>
+                        <p>Webflow</p>
+                    </div>
+                </a>
                 <Link to='/blog'>
                 <div>
                         <img src="../Screenshot (994).png" alt="the blog" />

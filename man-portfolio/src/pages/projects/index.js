@@ -19,6 +19,16 @@ const Projects = ({ data }) => {
               <p>Next js</p>
             </div>
           </a>
+          <a href="https://real-estate-land-b9n5.vercel.app/" target="_blank">
+            <div>
+              <img
+                src="../Screenshot (2992).png"
+                alt="Real Estate Land Project"
+              />
+              <h3>Real Estate Land</h3>
+              <p>Next js</p>
+            </div>
+          </a>
           <a href="https://the-dash.pages.dev/" target="_blank">
             <div>
               <img src="../Screenshot (991).png" alt="the dash" />

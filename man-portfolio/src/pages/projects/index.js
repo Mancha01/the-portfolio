@@ -29,6 +29,13 @@ const Projects = ({ data }) => {
               <p>Next js</p>
             </div>
           </a>
+          <a href="https://ecommerce-v2.pages.dev/read" target="_blank">
+            <div>
+              <img src="../Screenshot (3285).png" alt="ecommerce crud v2" />
+              <h3>Ecommerce CRUD test project version ii</h3>
+              <p>React</p>
+            </div>
+          </a>
           <a
             href="https://ecommerce-crud-test-project.pages.dev/"
             target="_blank"

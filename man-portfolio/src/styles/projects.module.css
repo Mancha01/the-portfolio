@@ -1,40 +1,41 @@
 .portfolio {
-    text-align: center;
-  }
-  .portfolio > h2 {
-    font-size: 3em;
-    margin-top: 80px;
-  }
-  .portfolio > h3 {
-    font-size: 2em;
-    font-weight: 400;
-  }
+  text-align: center;
+}
+.portfolio > h2 {
+  font-size: 3em;
+  margin-top: 80px;
+}
+.portfolio > h3 {
+  font-size: 2em;
+  font-weight: 400;
+}
 
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 80px;
+  margin: 80px 20px;
+}
+.projects h3 {
+  text-align: center;
+  margin: 20px auto 0px;
+  font-weight: 500;
+}
+.projects p {
+  color: #ccc;
+  margin-top: 4px;
+}
+
+.projects img {
+  max-width: 300px;
+  max-height: 500px;
+  border-radius: 15px;
+}
+
+@media (max-width: 780px) {
   .projects {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 80px;
-    margin: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
   }
-  .projects h3 {
-    text-align: center;
-    margin: 20px auto 0px;
-    font-weight: 500;
-  }
-  .projects p {
-    color: #ccc;
-    margin-top: 4px;
-  }
-
-  .projects img{
-      max-width: 300px;
-      max-height: 500px;
-  }
-
-  @media (max-width: 780px){
-      .projects{
-          display: flex;
-          flex-direction: column;
-          justify-items: center;
-      }
-  }
+}

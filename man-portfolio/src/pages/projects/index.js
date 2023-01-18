@@ -19,6 +19,13 @@ const Projects = ({ data }) => {
               <p>Next js</p>
             </div>
           </a>
+          <a href="https://shopping-cart-dmp.pages.dev/" target="_blank">
+            <div>
+              <img src="../Screenshot (4006).png" alt="Shopping Cart" />
+              <h3>Shopping Cart</h3>
+              <p>React, Redux Toolkit</p>
+            </div>
+          </a>
           <a href="https://real-estate-land-b9n5.vercel.app/" target="_blank">
             <div>
               <img

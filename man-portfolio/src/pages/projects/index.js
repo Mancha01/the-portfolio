@@ -19,6 +19,13 @@ const Projects = ({ data }) => {
               <p>Next js</p>
             </div>
           </a>
+          <a href="https://todo-app-8ic.pages.dev/" target="_blank">
+            <div>
+              <img src="../Screenshot (4103).png" alt="Todo App" />
+              <h3>Todo App</h3>
+              <p>React, Redux</p>
+            </div>
+          </a>
           <a href="https://shopping-cart-dmp.pages.dev/" target="_blank">
             <div>
               <img src="../Screenshot (4006).png" alt="Shopping Cart" />

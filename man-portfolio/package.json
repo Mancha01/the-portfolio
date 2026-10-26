@@ -1,45 +1,48 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "mancha-portfolio",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
+  "description": "Portfolio of Emmanuel Mancha Pam — Senior Frontend Engineer",
+  "version": "2.0.0",
   "license": "0BSD",
+  "author": "Emmanuel Mancha Pam <pamemmanuel0@gmail.com>",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.1.1",
-    "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@fortawesome/react-fontawesome": "^0.1.18",
-    "framer-motion": "^10.16.4",
-    "gatsby": "^4.12.1",
-    "gatsby-image": "^3.11.0",
-    "gatsby-plugin-google-gtag": "^4.13.0",
-    "gatsby-plugin-image": "^2.12.1",
-    "gatsby-plugin-sharp": "^4.12.1",
-    "gatsby-source-filesystem": "^4.12.1",
-    "gatsby-transformer-remark": "^5.12.1",
-    "gatsby-transformer-sharp": "^4.12.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-icons": "^4.3.1",
-    "react-router-dom": "^6.3.0",
-    "react-social-icons": "^5.13.0"
+    "gatsby": "^5.14.1",
+    "gatsby-plugin-google-gtag": "^5.14.0",
+    "gatsby-plugin-image": "^3.14.0",
+    "gatsby-plugin-postcss": "^6.14.0",
+    "gatsby-plugin-sharp": "^5.14.0",
+    "gatsby-source-filesystem": "^5.14.0",
+    "gatsby-transformer-sharp": "^5.14.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.4.0"
   },
   "devDependencies": {
-    "prettier": "^2.6.2"
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^20.17.10",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "prettier": "^3.4.2",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/Mancha01/the-portfolio"
   }
 }

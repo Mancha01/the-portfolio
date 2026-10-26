@@ -5,40 +5,34 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: "Emmanuel Mancha Pam — Senior Frontend Engineer",
+    description:
+      "Senior frontend engineer building enterprise ERPs, CRMs, realtime dashboards and AI-assisted products with React, Next.js and TypeScript.",
+    author: "Emmanuel Mancha Pam",
+    // Override with GATSBY_SITE_URL if the site moves to a custom domain.
+    siteUrl: process.env.GATSBY_SITE_URL || "https://the-portfolio.pages.dev",
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: [
-          "G-1LTZQ7BHYR", // Google Analytics / GA
-        ],
-        // This object is used for configuration specific to this plugin
+        trackingIds: ["G-1LTZQ7BHYR"],
         pluginConfig: {
-          // Puts tracking script in the head instead of the body
           head: true,
-          // Setting this parameter is also optional
-          // Defaults to https://www.googletagmanager.com
-          origin: "YOUR_SELF_HOSTED_ORIGIN",
         },
       },
     },
-    'gatsby-transformer-remark',
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `projects`,
-        path: `${__dirname}/src/projects/`,
+        name: `images`,
+        path: `${__dirname}/src/images/`,
       },
     },
   ],
-  siteMetadata: {
-    title: 'Mancha Pam',
-    description: 'Web Development Portfolio',
-    copyright: 'This Website is Copyright 2022 Mancha Pam'
-  }
 }

@@ -1,138 +1,189 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&family=Ubuntu:wght@300;400;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  font-family: "Ubuntu";
-  color: white;
-}
-html,
-body {
-  min-height: 100%;
-}
-body {
-  background: radial-gradient(
-    at top left,
-    rgba(9, 32, 63, 1) 0%,
-    rgba(43, 9, 107, 1) 100%
-  );
-  background-repeat: no-repeat;
-}
-p {
-  margin: 16px auto;
-  line-height: 1.5em;
-}
-
-/* layout & nav */
-.layout {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 40px auto;
-}
-nav .links {
-  display: inline-block;
-  text-align: right;
-}
-nav a {
-  display: inline-block;
-  margin-left: 20px;
-  font-weight: 400;
-  padding-bottom: 8px;
-  border-bottom: 3px solid transparent;
-  transition: 0.7s ease-in-out;
-}
-nav a:hover {
-  border-color: white;
-}
-footer p {
-  text-align: center;
-  color: #bbb;
-  margin: 40px auto;
-}
-
-.blog {
-  max-width: 100vw;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-
-.blog img {
-  margin-bottom: 50px;
-  max-width: 100vw;
-}
-.challenges {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-}
-.challenges iframe {
-  margin-top: 20px;
-}
-.challenges h1 {
-  margin-bottom: 20px;
-}
-
-.fa-icons {
-  margin-right: 20px;
-  padding: 10px;
-  font-size: 25px;
-}
-
-/* the download button */
-.download-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #624c3c; /* Change to your preferred button color */
-  color: #fff;
-  text-decoration: none;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  margin: 10px 0;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.download-button:hover {
-  background-color: #f4bf96;
-  color: #31261e;
-}
-
-.download-button-container {
-  text-align: center;
-}
-
-@media (max-width: 780px) {
-  .about {
-    padding: 10px;
+@layer base {
+  :root {
+    --bg: 247 247 251;
+    --surface: 255 255 255;
+    --line: 226 228 238;
+    --ink: 12 17 36;
+    --muted: 84 92 116;
+    --accent: 217 119 6;
+    --accent2: 124 58 237;
+    --accent-mid: 234 88 12;
+    color-scheme: light;
   }
-  .contact {
-    padding-left: 20px;
-    padding-right: 20px;
+  .dark {
+    --bg: 7 10 24;
+    --surface: 14 19 40;
+    --line: 33 40 70;
+    --ink: 236 239 248;
+    --muted: 150 158 186;
+    --accent: 251 176 59;
+    --accent2: 167 139 250;
+    --accent-mid: 252 211 77;
+    color-scheme: dark;
   }
 
-  .challenges iframe {
-    max-width: 100%;
+  html {
+    scroll-padding-top: 5rem;
   }
-  .challenges {
-    padding: 25px;
+  /* Smooth-scroll only for in-page link clicks (the clicked link holds focus);
+     arriving from an external /#section link jumps straight there. */
+  html:focus-within {
+    scroll-behavior: smooth;
   }
-
-  .challenges h1 {
-    padding-left: 20px;
-    margin-bottom: 20px;
+  body {
+    @apply bg-bg font-sans text-ink antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+  ::selection {
+    background: rgb(var(--accent) / 0.3);
+  }
+  :focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html, html:focus-within { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
-.contact h1 {
-  margin-bottom: 20px;
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8;
+  }
+  .card {
+    @apply rounded-2xl border border-line bg-surface/70 backdrop-blur-sm;
+  }
+  .chip {
+    @apply inline-flex items-center rounded-full border border-line bg-bg/60 px-2.5 py-0.5 text-xs font-medium text-muted;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-[#1a1203] hover:brightness-110;
+  }
+  .btn-ghost {
+    @apply btn border border-line text-ink hover:border-accent hover:text-accent;
+  }
+  .eyebrow {
+    @apply font-display text-xs font-semibold uppercase tracking-[0.2em] text-accent;
+  }
+  .text-gradient {
+    background-image: linear-gradient(
+      90deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-mid)),
+      rgb(var(--accent2)),
+      rgb(var(--accent-mid)),
+      rgb(var(--accent))
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 }
-.contact h3 {
-  margin-bottom: 50px;
+
+/* Scroll reveal: only hidden once JS is running and motion is allowed */
+@media (prefers-reduced-motion: no-preference) {
+  .js-reveal .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1), transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .js-reveal .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Motion ---------- */
+@keyframes word-in {
+  to { opacity: 1; transform: none; filter: none; }
+}
+@keyframes shimmer {
+  to { background-position: -200% center; }
+}
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+@keyframes grow-x {
+  from { transform: scaleX(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Hero headline: words rise in one after another (only once JS is running) */
+  .js-reveal .word-in {
+    opacity: 0;
+    transform: translateY(0.45em);
+    filter: blur(6px);
+    animation: word-in 0.75s cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0s) forwards;
+  }
+  .js-reveal .word-in.text-gradient {
+    animation:
+      word-in 0.75s cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0s) forwards,
+      shimmer 7s linear calc(var(--d, 0s) + 0.75s) infinite;
+  }
+  .text-gradient.shimmer {
+    animation: shimmer 7s linear infinite;
+  }
+  .marquee-track {
+    animation: marquee 45s linear infinite;
+  }
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
+  .tilt {
+    transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    transition: transform 0.25s ease-out;
+    will-change: transform;
+  }
+  .nav-indicator {
+    animation: grow-x 0.3s ease-out;
+  }
+}
+.word-in { display: inline-block; }
+
+/* Fade the marquee out at both edges */
+.marquee {
+  mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+}
+
+/* Cursor spotlight on cards (mouse/trackpad only) */
+@media (hover: hover) and (pointer: fine) {
+  .spotlight {
+    background-image: radial-gradient(
+      520px circle at var(--mx, -999px) var(--my, -999px),
+      rgb(var(--accent) / 0.1),
+      transparent 45%
+    );
+  }
+  .spotlight:hover {
+    border-color: rgb(var(--accent) / 0.45);
+  }
+}
+
+/* Ambient background glow */
+.bg-aurora {
+  background:
+    radial-gradient(60rem 30rem at 10% -10%, rgb(var(--accent2) / 0.18), transparent 60%),
+    radial-gradient(50rem 30rem at 100% 0%, rgb(var(--accent) / 0.12), transparent 60%);
+}
+.bg-grid {
+  background-image:
+    linear-gradient(rgb(var(--line) / 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(var(--line) / 0.5) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at top, black 20%, transparent 70%);
 }

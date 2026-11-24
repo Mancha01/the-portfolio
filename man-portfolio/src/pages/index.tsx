@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link, type HeadFC } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { FiArrowRight, FiArrowUpRight, FiDownload, FiMapPin, FiMail, FiPlay } from "react-icons/fi"
+import { FiArrowRight, FiArrowUpRight, FiDownload, FiMapPin, FiMail } from "react-icons/fi"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import Reveal from "../components/Reveal"
@@ -18,8 +18,6 @@ import {
   skills,
   certifications,
   education,
-  earlierWork,
-  challengeVideos,
 } from "../data/content"
 
 const SectionHeading = ({ eyebrow, title, intro }: { eyebrow: string; title: string; intro?: string }) => (
@@ -46,7 +44,7 @@ const Hero = () => (
       </Reveal>
       <Reveal delay={0.05}>
         <p className="mt-6 font-display text-lg font-medium text-muted">
-          Hi, I'm {profile.name} — <span className="text-ink">{profile.role}</span>
+          Hi, I'm {profile.name}, a <span className="text-ink">{profile.role}</span>
         </p>
       </Reveal>
       <h1 className="mt-3 text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-6xl">
@@ -197,7 +195,7 @@ const Work = () => {
       <SectionHeading
         eyebrow="Selected work"
         title="Platforms I've shaped."
-        intro="Enterprise products I've led or been a core engineer on. Client names are withheld where agreements require it."
+        intro="Enterprise products I've led or built as a core engineer. Some clients are described rather than named."
       />
       <div className="grid gap-6 md:grid-cols-2">
         {featured.map((c, i) => (
@@ -314,71 +312,6 @@ const Skills = () => (
   </section>
 )
 
-const Earlier = () => (
-  <section id="earlier" className="container-x py-24">
-    <SectionHeading
-      eyebrow="Earlier work & experiments"
-      title="Where it started."
-      intro="Side projects and early client builds from my freelance years — kept live because the journey matters."
-    />
-    <ul className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
-      {earlierWork.map((p, i) => (
-        <Reveal as="li" key={p.title} delay={(i % 5) * 0.04}>
-          <a
-            href={p.href}
-            target="_blank"
-            rel="noreferrer"
-            className="card spotlight group block h-full overflow-hidden transition hover:border-accent/60"
-          >
-            <div className="aspect-[16/10] overflow-hidden border-b border-line bg-bg">
-              <img
-                src={encodeURI(p.image)}
-                alt={`Screenshot of ${p.title}`}
-                loading="lazy"
-                className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
-              />
-            </div>
-            <div className="p-3">
-              <p className="text-sm font-semibold">{p.title}</p>
-              <p className="text-xs text-muted">{p.stack}</p>
-            </div>
-          </a>
-        </Reveal>
-      ))}
-    </ul>
-
-    <details className="card mt-6 p-6">
-      <summary className="cursor-pointer font-semibold">
-        Programming challenge videos <span className="text-sm font-normal text-muted">({challengeVideos.length})</span>
-      </summary>
-      <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {challengeVideos.map(id => (
-          <a
-            key={id}
-            href={`https://www.youtube.com/watch?v=${id}`}
-            target="_blank"
-            rel="noreferrer"
-            className="group relative block aspect-video overflow-hidden rounded-xl border border-line bg-bg"
-          >
-            <img
-              src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
-              alt="Programming challenge video thumbnail"
-              loading="lazy"
-              className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-            />
-            <span className="absolute inset-0 grid place-items-center bg-black/30 transition group-hover:bg-black/10">
-              <span className="grid h-12 w-12 place-items-center rounded-full bg-accent text-[#1a1203] shadow-lg">
-                <FiPlay aria-hidden className="ml-0.5" />
-              </span>
-            </span>
-            <span className="sr-only">Watch on YouTube</span>
-          </a>
-        ))}
-      </div>
-    </details>
-  </section>
-)
-
 const Contact = () => (
   <section id="contact" className="container-x py-24">
     <Reveal className="card spotlight relative overflow-hidden p-8 text-center sm:p-14">
@@ -414,7 +347,6 @@ const IndexPage = () => (
     <Experience />
     <Work />
     <Skills />
-    <Earlier />
     <Contact />
   </Layout>
 )

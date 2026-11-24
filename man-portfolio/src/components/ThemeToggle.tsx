@@ -15,7 +15,7 @@ const ThemeToggle = () => {
     try {
       localStorage.setItem("theme", next ? "dark" : "light")
     } catch {
-      // storage unavailable — theme still applies for this visit
+      // storage unavailable; the theme still applies for this visit
     }
   }
 

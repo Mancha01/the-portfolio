@@ -20,7 +20,7 @@ test.describe("home page", () => {
     await expect(page).toHaveTitle(/Emmanuel Mancha Pam/)
     await expect(page.getByRole("heading", { level: 1 })).toContainText("enterprises run on")
     await expect(page.getByAltText("Portrait of Emmanuel Mancha Pam")).toBeVisible()
-    for (const id of ["about", "experience", "work", "skills", "earlier", "contact"]) {
+    for (const id of ["about", "experience", "work", "skills", "contact"]) {
       await expect(page.locator(`section#${id}`)).toBeAttached()
     }
     await page.waitForLoadState("networkidle")
@@ -226,8 +226,8 @@ test.describe("navigation", () => {
     ["/about/", "about"],
     ["/contact/", "contact"],
     ["/projects/", "work"],
-    ["/challenges/", "earlier"],
-    ["/blog/", "earlier"],
+    ["/challenges/", "work"],
+    ["/blog/", "work"],
   ]) {
     test(`old URL ${from} redirects to #${anchor}`, async ({ page }) => {
       await page.goto(from)
@@ -261,6 +261,35 @@ test.describe("case studies", () => {
       await page.getByRole("link", { name: /Next project/ }).click()
       await expect(page).toHaveURL(new RegExp(`/work/${caseStudies[i].slug}/$`))
     }
+  })
+})
+
+test.describe("copy & sharing", () => {
+  // Em dashes read as machine-written; keep visible copy free of them on every page.
+  for (const path of ["/", ...caseStudies.map(c => `/work/${c.slug}/`)]) {
+    test(`no em dashes in visible text on ${path}`, async ({ page }) => {
+      await page.goto(path)
+      const text = await page.locator("body").innerText()
+      expect(text.match(/.{0,30}—.{0,30}/g) ?? []).toEqual([])
+      expect(await page.title()).not.toContain("—")
+    })
+  }
+
+  test("old practice-projects section is gone", async ({ page }) => {
+    await page.goto("/")
+    await expect(page.locator("#earlier")).toHaveCount(0)
+    await expect(page.getByText("Where it started")).toHaveCount(0)
+  })
+
+  test("link-preview card is a 1200x630 PNG that is served", async ({ page, request }) => {
+    await page.goto("/")
+    const og = await page.locator('meta[property="og:image"]').getAttribute("content")
+    expect(og).toMatch(/\/og-image\.png$/)
+    await expect(page.locator('meta[property="og:image:width"]')).toHaveAttribute("content", "1200")
+    await expect(page.locator('meta[property="og:image:height"]')).toHaveAttribute("content", "630")
+    const res = await request.get("/og-image.png")
+    expect(res.status()).toBe(200)
+    expect(res.headers()["content-type"]).toContain("image/png")
   })
 })
 

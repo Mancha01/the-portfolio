@@ -1,7 +1,7 @@
 import * as React from "react"
 import Redirect, { redirectHead } from "../components/Redirect"
 
-const to = "/#earlier"
+const to = "/#work"
 
 const Page = () => <Redirect to={to} />
 

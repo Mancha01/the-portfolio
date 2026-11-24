@@ -12,11 +12,11 @@ export const profile = {
   resume: "/Emmanuel-Mancha-Pam-Resume.pdf",
   headline: "I build the interfaces enterprises run on.",
   subhead:
-    "Senior frontend engineer with 5+ years of professional experience shipping ERPs, CRMs, realtime dashboards and AI-assisted products in React, Next.js and TypeScript — from the first commit to production.",
+    "Senior frontend engineer with 5+ years of professional experience shipping ERPs, CRMs, realtime dashboards and AI-assisted products in React, Next.js and TypeScript, from first commit to production.",
   availability: "Open to senior & lead frontend roles",
   about: [
     "I'm a frontend engineer who likes the hard, unglamorous parts of software: double-entry accounting screens that have to balance, approval workflows that span seven microservices, maps that turn a land survey into something a sales team can click on.",
-    "At Wragby I've founded and led the frontend on enterprise products used across pharmaceutical, energy, retail, financial services and the Nigerian federal government — including a CRM suite I started from an empty repo and remain the top contributor to. Outside of Wragby I took a real-estate operations platform from requirements to a live product as its sole frontend engineer.",
+    "At Wragby I've led frontend work on enterprise products for pharmaceutical, energy, retail, financial services and Nigerian federal government clients. That includes a CRM suite I started from an empty repo and am still the top contributor to. Outside Wragby, I took a real-estate operations platform from requirements to a live product as its sole frontend engineer.",
     "I care about clear architecture, typed contracts and honest data, and about interfaces that hold up for real people doing real work: a finance team closing the month, a store running a stock count, a regulator reviewing a compliance case. I hold a B.Sc. in Computer Science from the University of Jos and am Microsoft Azure and Google Cloud certified.",
   ],
 };
@@ -36,7 +36,7 @@ export const socials = [
 export const stats = [
   { value: "5+", label: "years of professional experience" },
   { value: "8", label: "enterprise platforms delivered" },
-  { value: "1,000+", label: "routes across platforms I build on" },
+  { value: "1,000+", label: "routes across the platforms I work on" },
   { value: "1,300+", label: "commits authored since 2022" },
 ];
 
@@ -55,10 +55,10 @@ export const experience: Role[] = [
     company: "Wragby Business Solutions",
     title: "Senior Frontend Engineer",
     type: "Full-time",
-    period: "Sep 2022 — Present",
+    period: "Sep 2022 – Present",
     location: "Lagos, Nigeria",
     summary:
-      "Frontend lead on a portfolio of enterprise products — ERP, CRM, realtime operations and regulatory platforms — for clients in pharma, energy, retail, banking and the Nigerian federal government.",
+      "Frontend lead across a portfolio of enterprise products (ERP, CRM, realtime operations and regulatory platforms) for clients in pharma, energy, retail, banking and the Nigerian federal government.",
     highlights: [
       "Started the Wragby CRM frontend from an empty repo and remain its top contributor across 7 modules and 89 routes.",
       "Top contributor to a 533-route pharmaceutical ERP over 2+ years.",
@@ -70,12 +70,12 @@ export const experience: Role[] = [
     company: "Kay Steph Group · AcreFlow",
     title: "Lead Frontend Engineer",
     type: "Contract",
-    period: "Nov 2025 — Present",
+    period: "Nov 2025 – Present",
     location: "Remote",
     summary:
       "Owned requirements, delivery and the entire frontend of a real-estate operations platform now running a developer's day-to-day sales, later productised as AcreFlow.",
     highlights: [
-      "Sole frontend engineer — 62 of 64 commits, ~26k lines of TypeScript.",
+      "Sole frontend engineer: 62 of 64 commits and ~26k lines of TypeScript.",
       "Interactive SVG estate maps, 11-role RBAC, installment payments with PDF receipts.",
       "Wrote the user guide pipeline and product pitch used to sell the platform.",
     ],
@@ -84,12 +84,12 @@ export const experience: Role[] = [
     company: "Freelance & Independent Projects",
     title: "Frontend Engineer",
     type: "Part-time",
-    period: "2019 — 2022",
+    period: "2019 – 2022",
     location: "Abuja, Nigeria",
     summary:
-      "Part-time client gigs and self-directed builds — responsive web and mobile apps using React, Next.js, Redux and React Native.",
+      "Part-time client gigs and self-directed builds: responsive web and mobile apps with React, Next.js, Redux and React Native.",
     highlights: [
-      "Delivered client sites and built my own apps — dashboards, e-commerce and a music app (several still live below).",
+      "Delivered client sites and built my own apps, including dashboards, e-commerce stores and a music app.",
       "Built a React Native QR scanner with a reusable component library.",
     ],
   },
@@ -97,7 +97,7 @@ export const experience: Role[] = [
     company: "Compunet",
     title: "Frontend Engineer",
     type: "Full-time",
-    period: "Feb 2017 — Feb 2018",
+    period: "Feb 2017 – Feb 2018",
     location: "Jos, Nigeria",
     summary:
       "Revamped the UI of a social media platform and translated design mock-ups into responsive, reusable interfaces in agile sprints.",
@@ -126,10 +126,10 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "acreflow",
     title: "AcreFlow",
-    client: "Kay Steph Group — real-estate developer",
+    client: "Kay Steph Group · Real-estate developer",
     tagline:
-      "An all-in-one operations platform for land and real-estate sales — clients, inventory, installment payments and interactive estate maps.",
-    year: "2025 — 2026",
+      "An all-in-one operations platform for land and real-estate sales: clients, inventory, installment payments and interactive estate maps.",
+    year: "2025 – 2026",
     role: "Lead Frontend Engineer & delivery owner",
     featured: true,
     accent: "from-amber-400 to-orange-500",
@@ -144,13 +144,13 @@ export const caseStudies: CaseStudy[] = [
     built: [
       "Gathered and wrote the requirements with the client, then designed and built the entire frontend.",
       "Interactive estate layout map: admins upload an SVG survey drawing, plot labels are normalised and hydrated into clickable, colour-coded plots with zoom, pan, search-to-plot and click-through to the property record.",
-      "Payments engine UI for full and installment plans — initial deposits, overdue detection, refunds, receipt uploads and branded PDF receipts.",
+      "Payments UI for full and installment plans, covering initial deposits, overdue detection, refunds, receipt uploads and branded PDF receipts.",
       "Client CRM, property inventory, dashboards (revenue actual vs expected, client status), bulk email campaigns, audit log, notifications and user management.",
       "Route-level RBAC with 11 roles enforced in both middleware and layout, redirecting users to their first permitted area.",
       "Automated, screenshot-driven user guide and a product pitch deck used to sell the platform to other developers.",
     ],
     architecture: [
-      "Next.js App Router with RTK Query — 11 API slices over a .NET API on Azure App Service, Azure Blob Storage for documents.",
+      "Next.js App Router with RTK Query: 11 API slices over a .NET API on Azure App Service, with Azure Blob Storage for documents.",
       "Semi-atomic component system with documented modal, table and colour-token conventions.",
       "Dark mode, responsive layouts and Vercel CI deploys.",
     ],
@@ -160,10 +160,10 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "wragby-crm",
     title: "Wragby CRM",
-    client: "Wragby — enterprise business suite",
+    client: "Wragby · Enterprise business suite",
     tagline:
-      "A multi-module CRM covering service desk, business development, marketing, activity tracking and an AI assistant — plus a customer self-service portal.",
-    year: "2025 — 2026",
+      "A multi-module CRM covering service desk, business development, marketing, activity tracking and an AI assistant, plus a customer self-service portal.",
+    year: "2025 – 2026",
     role: "Founding frontend engineer · top contributor",
     featured: true,
     accent: "from-violet-400 to-fuchsia-500",
@@ -174,12 +174,12 @@ export const caseStudies: CaseStudy[] = [
       { value: "~60%", label: "of all commits" },
     ],
     problem:
-      "Wragby needed its own CRM product to sell to enterprise clients — a single suite for support, sales pipelines, marketing and customer engagement, with a portal customers could use directly.",
+      "Wragby needed its own CRM product to sell to enterprise clients: one suite for support, sales pipelines, marketing and customer engagement, with a portal customers could use directly.",
     built: [
       "Started the app from an empty repo: authentication, middleware guards, protected layouts, module picker with per-environment feature flags.",
       "Service Desk: ticketing, agent assignment, resolution flows and dashboards for volume, trend and resolution time.",
       "Knowledge base with markdown articles, attachments, feedback, PDF export and AI-generated content.",
-      "Customer self-service portal with ticket creation, file upload, OTP password recovery and deep links — reducing support overhead.",
+      "Customer self-service portal with ticket creation, file upload, OTP password recovery and deep links, which reduced support overhead.",
       "Business Development: pipelines, deal filtering, bulk upload and owner reassignment, budgets with period breakdowns, profitability and six report types.",
       "Activity module with Microsoft 365 email integration, calls, meetings, notes and tasks; Marketing with audiences, campaigns, email composer and reports.",
       "App-wide dark mode, Playwright end-to-end suites and a UAT playbook.",
@@ -190,15 +190,15 @@ export const caseStudies: CaseStudy[] = [
       "Azure DevOps pipelines to staging and production.",
     ],
     outcome:
-      "In production for Wragby and its clients; I remain the top contributor across every module.",
+      "In production for Wragby and its clients. I'm still the top contributor across every module.",
   },
   {
     slug: "energy-erp",
     title: "Enterprise ERP for Energy",
     client: "Oil & gas company",
     tagline:
-      "A full ERP — accounting, procurement, inventory, projects and HR — on a single Next.js frontend over seven microservices.",
-    year: "2025 — 2026",
+      "A full ERP (accounting, procurement, inventory, projects and HR) on a single Next.js frontend over seven microservices.",
+    year: "2025 – 2026",
     role: "Senior Frontend Engineer · accounting, procurement & fixed assets",
     featured: true,
     accent: "from-sky-400 to-cyan-500",
@@ -213,7 +213,7 @@ export const caseStudies: CaseStudy[] = [
     built: [
       "Accounting: hierarchical chart of accounts, dimensions with posting-rule validation, journal entries, and General Ledger and Trial Balance reports with drill-down from TB to GL.",
       "Procurement, built from the ground up: material requisitions, RFQs and purchase orders with nested line tables, threaded comments, reminders and exports.",
-      "Integration with a centralised multi-level approval service — approver roles, workflow modals, audit trails and approval dashboards.",
+      "Integration with a central multi-level approval service: approver roles, workflow modals, audit trails and approval dashboards.",
       "Fixed assets: categories, register, revaluation, disposal and reports.",
       "Memoised table rendering and optimised exports for large ledgers.",
     ],
@@ -230,7 +230,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Pharmaceutical manufacturer & distributor",
     tagline:
       "Role-based workspaces for directors, sales, finance, HR and audit across a 533-route React ERP.",
-    year: "2023 — 2025",
+    year: "2023 – 2025",
     role: "Frontend Engineer · top contributor",
     featured: true,
     accent: "from-emerald-400 to-teal-500",
@@ -241,7 +241,7 @@ export const caseStudies: CaseStudy[] = [
       { value: "#1", label: "contributor" },
     ],
     problem:
-      "A pharmaceutical business needed every department — from the Managing Director down to field sales — working in one system with the right approvals and reports.",
+      "A pharmaceutical business needed every department, from the Managing Director to field sales, working in one system with the right approvals and reports.",
     built: [
       "Approval workspaces for the Managing Director and directorates (sales orders, expenses, inventory).",
       "Chart of accounts, customer ageing reports and print-ready customer statements.",
@@ -273,7 +273,7 @@ export const caseStudies: CaseStudy[] = [
       { value: "#1", label: "contributor" },
     ],
     problem:
-      "A regulator needed a trustworthy view of nominations, imbalances, compliance cases and transport revenue — where wrong numbers have legal consequences.",
+      "A regulator needed a trustworthy view of nominations, imbalances, compliance cases and transport revenue, where wrong numbers have legal consequences.",
     built: [
       "Command-centre dashboard, market insights, transport revenue and transportation visualisations.",
       "Replaced ~450 lines of client-side aggregation with server-computed figures for consistent, auditable numbers.",
@@ -296,7 +296,7 @@ export const caseStudies: CaseStudy[] = [
     tagline:
       "Live stock-count sessions, price checks and variance tracking across the stores of a leading Nigerian supermarket group.",
     year: "2026",
-    role: "Lead (near-sole) Frontend Engineer",
+    role: "Lead Frontend Engineer (near-sole developer)",
     featured: true,
     accent: "from-lime-400 to-green-500",
     stack: ["Next.js 15", "React 19", "Redux Toolkit", "SignalR", "Tailwind v4", "Recharts", "ExcelJS", "jsPDF"],
@@ -325,14 +325,14 @@ export const caseStudies: CaseStudy[] = [
     client: "Bank (proof of concept)",
     tagline: "A React Native app giving bank customers a conversational AI support channel.",
     year: "2025",
-    role: "Mobile Engineer — built from scratch",
+    role: "Mobile Engineer (built from scratch)",
     featured: false,
     accent: "from-indigo-400 to-blue-500",
     stack: ["Expo", "React Native", "TypeScript", "React Navigation", "Reanimated"],
     metrics: [],
     problem: "A bank wanted to test AI-driven customer support on mobile.",
     built: [
-      "Set up the project and built every screen — home, chat room and conversation history — with animated chat UI.",
+      "Set up the project and built every screen (home, chat room and conversation history) with an animated chat UI.",
     ],
     architecture: ["Expo with React Native's New Architecture and EAS builds."],
     outcome: "Delivered a working prototype for the bank's AI support pilot.",
@@ -399,20 +399,5 @@ export const education = {
   school: "University of Jos",
   degree: "B.Sc. Computer Science",
   year: "2019",
-  nysc: "NYSC — national service completed, 2020",
+  nysc: "NYSC: national service completed, 2020",
 };
-
-export const earlierWork = [
-  { title: "My Music App", stack: "Next.js", href: "https://my-music-app-livid.vercel.app/", image: "/Screenshot (2990).png" },
-  { title: "Real Estate Land", stack: "Next.js", href: "https://real-estate-land-b9n5.vercel.app/", image: "/Screenshot (2992).png" },
-  { title: "Shopping Cart", stack: "React · Redux Toolkit", href: "https://shopping-cart-dmp.pages.dev/", image: "/Screenshot (4006).png" },
-  { title: "Todo App", stack: "React · Redux", href: "https://todo-app-8ic.pages.dev/", image: "/Screenshot (4103).png" },
-  { title: "E-commerce CRUD v2", stack: "React", href: "https://ecommerce-v2.pages.dev", image: "/Screenshot (3285).png" },
-  { title: "E-commerce CRUD", stack: "React", href: "https://ecommerce-crud-test-project.pages.dev/", image: "/Screenshot (3254).png" },
-  { title: "The Dash", stack: "HTML · CSS · JS", href: "https://the-dash.pages.dev/", image: "/Screenshot (991).png" },
-  { title: "The Bank", stack: "HTML · SCSS · JS", href: "https://github.com/Mancha01/the-bank", image: "/Screenshot (990).png" },
-  { title: "The Eclipse", stack: "Webflow", href: "https://the-eclipse-618f27.webflow.io/", image: "/Screenshot (1017).png" },
-  { title: "The Blog", stack: "React", href: "https://github.com/Mancha01/the-blog", image: "/Screenshot (994).png" },
-];
-
-export const challengeVideos = ["NLYtEo2KBN4", "6LLZWsHBbT8", "uhudMoHl0sg", "xtlJRnXJSVQ", "bVNBgrCTZvA"];

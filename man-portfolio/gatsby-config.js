@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: "Emmanuel Mancha Pam — Senior Frontend Engineer",
+    title: "Emmanuel Mancha Pam | Senior Frontend Engineer",
     description:
       "Senior frontend engineer building enterprise ERPs, CRMs, realtime dashboards and AI-assisted products with React, Next.js and TypeScript.",
     author: "Emmanuel Mancha Pam",
